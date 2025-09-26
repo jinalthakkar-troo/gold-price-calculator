@@ -1,44 +1,247 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   margin: 0;
   padding: 20px;
+  min-height: 100vh;
 }
 
 .container {
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
   background: #fff;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-input {
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+}
+
+.gold-types {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.gold-type {
+  background: #fff9e6;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+  min-width: 120px;
+  border: 2px solid #ffd700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.gold-type:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gold-type.active {
+  background: #fff0b3;
+  border-color: #b8860b;
+  transform: translateY(-2px);
+}
+
+.gold-type h3 {
+  margin: 0 0 10px 0;
+  color: #b8860b;
+}
+
+.gold-type .price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #27ae60;
+}
+
+.price-info {
+  background: #fff9e6;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #ffd700;
+}
+
+.current-price {
+  font-size: 1.3em;
+  color: #27ae60;
+  margin: 0;
+  text-align: center;
+}
+
+.loading {
+  color: #3498db;
+  text-align: center;
+  margin: 0;
+}
+
+.error {
+  color: #e74c3c;
+  text-align: center;
+  margin: 0;
+}
+
+.input-section {
+  margin: 30px 0;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+input, select {
   width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 15px;
+  margin: 5px 0;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #3498db;
 }
 
 button {
   width: 100%;
-  padding: 10px;
-  background: green;
+  padding: 15px;
+  background: #27ae60;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #219a52;
+}
+
+button:disabled {
+  background: #95a5a6;
+  cursor: not-allowed;
+}
+
+.result-section {
+  background: #e8f5e9;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  border-left: 4px solid #4caf50;
+}
+
+.breakdown {
+  line-height: 1.6;
+}
+
+.breakdown p {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.final-price {
+  font-size: 1.4em;
+  color: #2e7d32;
+  border-top: 2px solid #4caf50;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.history-section {
+  margin-top: 30px;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.clear-btn {
+  width: auto;
+  padding: 8px 15px;
+  background: #e74c3c;
+  font-size: 14px;
+}
+
+.clear-btn:hover {
+  background: #c0392b;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
+  margin-top: 10px;
+  background: #f8f9fa;
 }
 
-th, td {
-  border: 1px solid #ccc;
-  padding: 8px;
+th {
+  background: #34495e;
+  color: white;
+  padding: 12px;
   text-align: center;
+}
+
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background: #ecf0f1;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  .gold-types {
+    flex-direction: column;
+  }
+  
+  .history-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .clear-btn {
+    width: 100%;
+  }
+  
+  .breakdown p {
+    flex-direction: column;
+    gap: 5px;
+  }
 }
