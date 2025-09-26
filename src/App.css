@@ -245,3 +245,55 @@ tr:nth-child(even) {
     gap: 5px;
   }
 }
+
+/* Add these styles to your existing App.css */
+
+.firebase-warning {
+  background: #fff3cd;
+  color: #856404;
+  padding: 10px;
+  border-radius: 5px;
+  border-left: 4px solid #ffc107;
+  margin-bottom: 10px;
+}
+
+.history-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.export-btn {
+  background: #17a2b8 !important;
+}
+
+.export-btn:hover {
+  background: #138496 !important;
+}
+
+.storage-info {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.storage-badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.storage-badge.cloud {
+  background: #d4edda;
+  color: #155724;
+}
+
+.storage-badge.local {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.saving {
+  opacity: 0.7;
+  pointer-events: none;
+}
