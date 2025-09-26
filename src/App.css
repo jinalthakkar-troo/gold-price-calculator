@@ -1,103 +1,44 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
   background: #f0f0f0;
   margin: 0;
   padding: 20px;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 600px;
   margin: auto;
   background: #fff;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-h1 {
-  text-align: center;
-  color: #2c3e50;
-}
-
-.price-info {
-  background: #fff9e6;
-  padding: 15px;
   border-radius: 8px;
-  margin: 15px 0;
-  text-align: center;
 }
 
-.gold-types {
-  display: flex;
-  gap: 15px;
-  margin: 20px 0;
-}
-
-.gold-type {
-  flex: 1;
-  padding: 15px;
-  background: #fff9e6;
-  border: 2px solid #ffd700;
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.gold-type.active {
-  background: #ffd700;
-}
-
-.input-group {
-  margin: 15px 0;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-input, select {
+input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  margin: 10px 0;
+  border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 button {
   width: 100%;
-  padding: 12px;
-  background: #28a745;
+  padding: 10px;
+  background: green;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-button:disabled {
-  background: #ccc;
-}
-
-.result-section {
-  background: #e8f5e9;
-  padding: 15px;
-  border-radius: 8px;
-  margin: 20px 0;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 10px;
+  border: 1px solid #ccc;
+  padding: 8px;
   text-align: center;
-}
-
-th {
-  background: #34495e;
-  color: white;
 }
