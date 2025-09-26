@@ -189,10 +189,6 @@ function App() {
       setHistory(newHistory);
       setFirebaseError(null);
       
-      // Reset form
-      setGrams("");
-      setFinalPrice(null);
-      
     } else {
       setFirebaseError("Failed to save calculation. Please try again.");
     }
@@ -272,6 +268,7 @@ function App() {
         </button>
       </div>
 
+      {/* ✅ PRICE BREAKDOWN SECTION - YEH RAHEGA */}
       {finalPrice && (
         <div className="result-section">
           <h2>💎 Price Breakdown</h2>
